@@ -72,7 +72,10 @@ color: white;
     margin: 0 0 24px;
     font-weight: 400;
 }
-
+.searchbar{
+  display: flex;
+  justify-content: center;
+}
 .searchbar>input{
     width: 500px;
     height: 56px;
@@ -178,23 +181,59 @@ color: white;
     background: lightgrey;
     border:2px solid black;
     cursor: pointer;
+    height: fit-content;
   }
   .closebtn{
     position: absolute;
     top: 10px;
     right: 10px;
-    background: none;
-    border: none;
     cursor: pointer;
-    font-size: 18px;
     color: #333;
   }
 
-  @media screen and (max-width: 900px){
+  @media (max-height: 550px),(max-width: 650px){
+    .navbar{
+      margin: auto 10px;
+      font-size: 3vw;
+    }
+    .content{
+      width: 100%;
+      margin-top: 100px; /* Adjust as needed */
+    }
+    .content h1,h1{
+      font-size: smaller;
+    }
+    .searchbar>input{
+      width: 75%;
+      height: 30px;
+    }
     .photolist{
       width: 100%;
     }
-    .searchbar>input{
-      width: 400px;
+    .photo-info{
+      font-size: 12px;
+      padding: 2px;
+    }
+    .profile-pic{
+      width: 17px;
+    }
+    .likes-info,.user-info{
+      flex-direction: column;
+    }
+    .modal-container {
+      font-size: 10px; 
+    }
+    .modal-container>img{
+      max-height: 50vh;
+    }
+    .down-details{
+      gap: 10px;
+      font-size: 8px;
+    }
+    .customicon{
+      transform: scale(0.7);
+    }
+    .download-button{
+      transform: scale(0.7); 
     }
   }

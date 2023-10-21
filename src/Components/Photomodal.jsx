@@ -3,6 +3,7 @@ import React from 'react';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import DownloadIcon from '@mui/icons-material/CloudDownload';
 import DownloadLink from 'react-download-link';
+import CloseIcon from '@mui/icons-material/Close';
 
 
 const PhotoModal = ({ photo, onClose,onTagClick  }) => {
@@ -28,7 +29,7 @@ const PhotoModal = ({ photo, onClose,onTagClick  }) => {
           </div>
           <div className="download-section">
           <DownloadLink
-            label={<DownloadIcon />}
+            label={<DownloadIcon/>}
             filename={`${photo.id}.jpg`}
             exportFile={() => photo.urls.full}
             tagName="button"
@@ -46,7 +47,7 @@ const PhotoModal = ({ photo, onClose,onTagClick  }) => {
             </div>
           </div>
         </div>
-        <button onClick={onClose} className='closebtn'>Close</button> 
+        <CloseIcon onClick={onClose} className='closebtn' />
       </div>
     </div>
   );
