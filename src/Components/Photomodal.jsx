@@ -17,7 +17,7 @@ const PhotoModal = ({ photo, onClose,onTagClick  }) => {
           <img src={photo.user.profile_image.small} alt={photo.user.name} className='profile-pic' />
           <div className='user-details'>
           <span>{photo.user.name}</span>
-          <a>Follow</a>
+          <a href={photo.user.links.html} target="_blank" rel="noopener noreferrer">Follow</a>
           </div>
         </div>
         <img src={photo.urls.full} alt={photo.alt_description} />

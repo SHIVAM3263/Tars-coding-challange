@@ -4,7 +4,7 @@ import bgimg2 from '../Assets/Aurora2.jpg'
 import bgimg3 from '../Assets/bg2.jpg'
 import bgimg4 from '../Assets/bg1.jpg'
 import Searchbar from './Searchbar'
- const Navbar = ({onSearch}) => {
+ const Navbar = ({onSearch,searchQuery}) => {
   useEffect(() => {
     const slider = document.getElementById('slideImg');
     
@@ -43,7 +43,7 @@ import Searchbar from './Searchbar'
        <div className='content'>
         <h1>Get the best high quality images</h1>
         <h2>Over 4.2 million+ high quality stock images,by our talented community.</h2>
-        <Searchbar onSearch={onSearch}/>
+        <Searchbar onSearch={onSearch} value={searchQuery} />
        </div>
       </div>
     </div>

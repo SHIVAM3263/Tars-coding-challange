@@ -5,8 +5,7 @@
     box-sizing: border-box;
     outline: 0;
     font-family: 'Poppins', sans-serif;
-    list-style: none;
-    
+    list-style: none;   
 }
 .banner{
 width: 100%;
@@ -80,6 +79,11 @@ color: white;
     padding: 0 0 0 24px;
     border-radius: 56px;
     color:black;
+}
+.loading-icon{
+  position: relative;
+  left: 50vw;
+  top: 20px;
 }
 .photolist{
     columns: 3;
@@ -166,6 +170,15 @@ color: white;
     display: flex;
     flex-direction: column;
   }
+  .tags{
+    display: flex;
+    gap: 6px;
+  }
+  .tags>span{
+    background: lightgrey;
+    border:2px solid black;
+    cursor: pointer;
+  }
   .closebtn{
     position: absolute;
     top: 10px;
@@ -175,4 +188,13 @@ color: white;
     cursor: pointer;
     font-size: 18px;
     color: #333;
+  }
+
+  @media screen and (max-width: 900px){
+    .photolist{
+      width: 100%;
+    }
+    .searchbar>input{
+      width: 400px;
+    }
   }

@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState('');
+const SearchBar = ({ onSearch,value }) => {
 
   const handleSearch = (event) => {
     const value = event.target.value;
-    setQuery(value);
     onSearch(value);
   };
 
@@ -14,7 +12,7 @@ const SearchBar = ({ onSearch }) => {
       <input
         type="text"
         placeholder="Search photos..."
-        value={query}
+        value={value}
         onChange={handleSearch}
       />
     </div>
